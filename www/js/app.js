@@ -24,50 +24,72 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
-    .state('app', {
+.state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.about', {
+      url: '/about',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/about.html',
+        }
+      }
+    })
+
+  .state('app.help', {
+      url: '/help',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/help.html',
+        }
+      }
+    })
+
+  .state('app.modules', {
+    url: '/modules',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/modules.html',
+        controller: 'ModulesCtrl'
       }
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
+  
+  .state('app.modul', {
+    url: '/module/:moduleId',
     views: {
       'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+        templateUrl: 'templates/module.html',
+        controller: 'ModuleCtrl'
+      }
+    }
+  })
+    
+ .state('app.store', {
+      url: '/store',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/store.html',
+          controller: 'StoreCtrl'
+        }
+      }
+    })
+    
+
+ .state('app.detail', {
+    url: '/detail/:moduleId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/detail.html',
+        controller: 'DetailCtrl'
       }
     }
   });
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+    // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('/app/modules');
 });
