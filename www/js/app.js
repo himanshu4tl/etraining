@@ -94,4 +94,4 @@ var app=angular.module('etraining', ['ionic'])
   $urlRouterProvider.otherwise('/app/modules');
 });
 
-app.config.url='http://localhost/pro/pro/etraining/web/api/';
+app.config.url='http://4technolabs.com/etraining/web/api/';
