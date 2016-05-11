@@ -1,0 +1,9 @@
+<ion-view view-title="Store">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="data in modules" href="#/app/detail/{{data.apm_id}}">
+        {{data.apm_name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
