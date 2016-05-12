@@ -1,11 +1,11 @@
-app.controller('StoreCtrl', function($scope,etraining) {
+app.controller('StoreCtrl', function($scope,api) {
     $scope.modules = [];
     console.log('Store ctrl');
-    var fun=function(response){
-        $scope.modules=response.data;
-        console.log($scope.modules);
-    };
-    etraining.getStoreList(fun);
-    
+    api.getStoreList()
+        .then(function(response){
+            $scope.modules=response.data;
+            console.log($scope.modules);
+        });
+
     
 })

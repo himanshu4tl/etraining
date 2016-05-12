@@ -1,9 +1,9 @@
-app.controller('DetailCtrl', function($scope, $stateParams,etraining) {
+app.controller('DetailCtrl', function($scope, $stateParams,api) {
     $scope.module = {};
     console.log('Store ctrl');
-    var fun=function(response){
-        $scope.module=response.data.data;
-        console.log($scope.module);
-    };
-    etraining.getDetail($stateParams.apm_id,fun);
+    api.getDetail($stateParams.apm_id)
+        .then(function(response){
+            $scope.module=response.data.data;
+            console.log($scope.module);
+        });
 })
