@@ -1,0 +1,10 @@
+<ion-view view-title="Module">
+  <ion-content>
+    <h1>{{currentQuestion.que_title}}</h1>
+    <ion-item ng-repeat="answer in currentQuestion.answers" >
+        {{answer.ans_description}}
+      </ion-item>
+    <button ng-click="next();">Next</button>
+
+  </ion-content>
+</ion-view>

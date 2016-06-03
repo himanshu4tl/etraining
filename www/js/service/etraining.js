@@ -55,6 +55,9 @@ app.factory('helper',function($ionicLoading){
         getDetail:function(id){
             return webService.get('site/module?id='+id); 
         },
+        getQuestions:function(id){
+            return webService.get('site/getquestions?id='+id); 
+        },
         
     };
     return etraining;

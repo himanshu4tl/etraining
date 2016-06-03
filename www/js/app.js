@@ -69,6 +69,15 @@ var app=angular.module('etraining', ['ionic','ngCordova'])
       }
     }
   })
+  .state('app.training', {
+    url: '/training/:moduleId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/training.html',
+        controller: 'TrainingCtrl'
+      }
+    }
+  })
     
  .state('app.store', {
       url: '/store',
@@ -94,4 +103,5 @@ var app=angular.module('etraining', ['ionic','ngCordova'])
   $urlRouterProvider.otherwise('/app/modules');
 });
 
-app.config.url='http://4technolabs.com/etraining/web/api/';
+//app.config.url='http://4technolabs.com/etraining/web/api/';
+app.config.url='http://localhost/pro/pro/etraining/web/api/';
