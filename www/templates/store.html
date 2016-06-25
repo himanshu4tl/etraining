@@ -1,9 +1,17 @@
 <ion-view view-title="Store">
   <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="data in modules" href="#/app/detail/{{data.apm_id}}">
-        {{data.apm_name}}
-      </ion-item>
-    </ion-list>
+      
+      <div ng-repeat="data in modules" class="col col-50" style="display:inline-block;">
+<div class="list card" style="margin-bottom:0px;margin-top: 15px;">
+  <div class="item item-image">
+    <img src="http://localhost/pro/pro/etraining/web/img/{{data.apm_logo}}" style="width:100%;height:200px;">
+  </div>
+
+  <a href="#/app/detail/{{data.apm_id}}" style="text-decoration: inherit;text-align:center;" >
+    <h5>{{data.apm_name}}</h5>
+  </a>
+
+</div>
+</div>
   </ion-content>
 </ion-view>

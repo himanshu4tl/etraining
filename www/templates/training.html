@@ -1,10 +1,11 @@
 <ion-view view-title="Module">
-  <ion-content>
-    <h1>{{currentQuestion.que_title}}</h1>
-    <ion-item ng-repeat="answer in currentQuestion.answers" >
-        {{answer.ans_description}}
-      </ion-item>
-    <button ng-click="next();">Next</button>
-
+  <ion-content class="padding">
+    <h4>{{currentQuestion.que_title}}</h4>
+      <ion-list>
+    <div ng-repeat="answer in currentQuestion.answers" >
+  <ion-radio ng-model="choice" ng-value="'A'">{{answer.ans_description}}</ion-radio>
+      </div>
+          </ion-list>
+<button ng-click="next();" class="button button-block button-positive " style="font-size:20px;">Next</button>
   </ion-content>
 </ion-view>

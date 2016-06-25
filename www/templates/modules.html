@@ -1,9 +1,13 @@
 <ion-view view-title="Modules">
   <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="module in modules" href="#/app/module/{{module.apm_id}}">
-        {{module.apm_name}}
-      </ion-item>
-    </ion-list>
+    <div class="list padding">
+      <a ng-repeat="module in modules" class="card item item-thumbnail-left"  href="#/app/module/{{module.apm_id}}" style="min-height:100px"> 
+        <img src="http://localhost/pro/pro/etraining/web/img/{{module.apm_logo}}" style="border-radius:0px;width:150px;height:150px;">
+      <div style="margin-top:5px">
+          <h2 style="overflow: visible;text-overflow:initial;white-space:initial;">{{module.apm_name}}</h2>
+      <p>{{module.apm_desc}}</p>
+    </div> 
+    </a>
+    </div>
   </ion-content>
 </ion-view>

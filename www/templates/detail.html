@@ -1,7 +1,15 @@
 <ion-view view-title="Detail">
   <ion-content>
-    <h1>{{module.apm_name}}</h1>
-      <p>{{module.apm_desc}}</p>
-      <button ng-click="purchase();">Add</button>
+      <div class="list card" style="margin-bottom:0px;margin-top: 20px;text-align:center;">
+  <div class="item item-image">
+    <img src="http://localhost/pro/pro/etraining/web/img/{{module.apm_logo}} "style="width:100%;height: 250px;">
+  </div>
+</div>
+</div>
+<div class="padding">
+      <h2>{{module.apm_name}}</h2>
+      <p style="text-align: justify;">{{module.apm_desc}}</p>
+    <button ng-click="purchase();" class="button button-block button-positive " style="font-size:20px;">ADD</button>
+</div>    
   </ion-content>
 </ion-view>
